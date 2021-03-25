@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <div class="jumbotron">
+    <div class="pageHeader">
       <h1 class="center">ABOUT</h1>
     </div>
 
@@ -32,11 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.jumbotron {
-  background:#EBF2F1;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
 .center {
   width: 65%;
 }

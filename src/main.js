@@ -8,6 +8,15 @@ Vue.config.productionTip = false
 
 let data = {
   products: productData,
+  account: {
+    name: "",
+    email: "",
+    allergyAttributes: {
+      dairyFree: false,
+      nutFree: false,
+      vegan: false
+    }
+  }
 }
 new Vue({
   router,

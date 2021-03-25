@@ -1,45 +1,94 @@
 let productData = [
     {
+    id: 1,
     name: "Blueberry Muffins",
     price: "3.99",
-    image: "~@assets/image/shop/blueberry-muffins.jpg",
-    recipe: "~@assets/recipe/blueberry-muffin-recipe.json"
+    image: "blueberry-muffins.jpg",
+    recipe: "blueberry-muffin-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: true,
+        nutFree: true,
+        vegan: false
+        }
     },
     {
+    id: 2,
     name: "Croissants",
     price: "2.99",
-    image: "~@assets/image/shop/croissants.jpg",
-    recipe: "~@assets/recipe/croissant-recipe.json"
+    image: "croissants.jpg",
+    recipe: "croissant-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: false,
+        nutFree: true,
+        vegan: false
+        }
     },
     {
+    id: 3,
     name: "Fudge Brownie",
     price: "4.99",
-    image: "~@assets/image/shop/fudge-brownie.jpg",
-    recipe: "~@assets/recipe/fudge-brownie-recipe.json"
+    image: "fudge-brownie.jpg",
+    recipe: "fudge-brownie-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: false,
+        nutFree: false,
+        vegan: false
+        }
     },
     {
+    id: 4,
     name: "Macarons",
     price: "14.99",
-    image: "~@assets/image/shop/macarons.jpg",
-    recipe: "~@assets/recipe/macarons-recipe.json"
+    image: "macarons.jpg",
+    recipe: "macarons-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: true,
+        nutFree: true,
+        vegan: true
+        }
     },
     {
+    id: 5,
     name: "Mousse Cake",
     price: "6.99",
-    image: "~@assets/image/shop/mousse-cake.jpg",
-    recipe: "~@assets/recipe/mousse-cake-recipe.json"
+    image: "mousse-cake.jpg",
+    recipe: "mousse-cake-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: false,
+        nutFree: true,
+        vegan: false
+        }
     },
     {
+    id: 6,
     name: "Rolls",
     price: "12.50",
-    image: "~@assets/image/shop/rolls.jpg",
-    recipe: "~@assets/recipe/rolls-recipe.json"
+    image: "rolls.jpg",
+    recipe: "rolls-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: true,
+        nutFree: true,
+        vegan: false
+        }
     },
     {
+    id: 7,
     name: "Fruit Tart",
     price: "5.99",
-    image: "~@assets/image/shop/fruit-tart.jpg",
-    recipe: "~@assets/recipe/fruit-tart-recipe.json"
+    image: "tart.jpg",
+    recipe: "fruit-tart-recipe.json",
+    attributes: {
+        favorite: false,
+        dairyFree: true,
+        nutFree: true,
+        vegan: true
+        }
     }
 ]
 

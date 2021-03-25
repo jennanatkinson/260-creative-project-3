@@ -5,6 +5,7 @@ import About from '../views/About.vue'
 import Shop from '../views/Shop.vue'
 import CustomOrder from '../views/CustomOrder.vue'
 import Catering from '../views/Catering.vue'
+import Account from '../views/Account.vue'
 
 Vue.use(VueRouter)
 
@@ -17,22 +18,27 @@ const routes = [
   {
     path: '/about',
     name: 'About',
-    compontent: About
+    component: About
   },
   {
     path: '/shop',
     name: 'Shop',
-    compontent: Shop
+    component: Shop
   },
   {
     path: '/custom-order',
     name: 'CustomOrder',
-    compontent: CustomOrder
+    component: CustomOrder
   },
   {
     path: '/catering',
     name: 'Catering',
-    compontent: Catering
+    component: Catering
+  },
+  {
+    path: '/account',
+    name: 'Account',
+    component: Account
   },
 ]
 

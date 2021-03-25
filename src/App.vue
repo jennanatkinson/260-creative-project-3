@@ -6,11 +6,12 @@
     </head>
     <div class="top-bar">
       <div id="navigation-icon" v-if="mobileView" @click="toggleNav">
-        <img src="@/assets/hamburger-menu-icon.png" />
+        <img src="~@/assets/hamburger-menu-icon.png" />
       </div>
       <div id="navigation" v-if="!mobileView || showNav">
-        <ul id="nav-list" v-bind:class="{ flexDisplay: mobileView }">
-          <li><router-link to="/"><img src="@/assets/images/golden-spoon.png"></router-link></li>
+        <p id="account"><router-link to="/account">account</router-link></p>
+        <ul id="nav-list" v-bind:class="{ flexDisplay: !mobileView, center: !mobileView }">
+          <li><router-link to="/"><img src="~@/assets/images/golden-spoon.png"></router-link></li>
           <li><router-link to="/">HOME</router-link></li>
           <li><router-link to="/about">ABOUT</router-link></li>
           <li><router-link to="/shop">SHOP</router-link></li>
@@ -55,20 +56,26 @@ export default {
     toggleNav() {
       this.showNav = !this.showNav;
     }
-  },
+  }
 }
 </script>
 
 <style>
 . {
   font-family: 'Montserrat', sans-serif;
+  /*padding: 0 !important;
+  margin: 0 !important;*/
+}
+a {
+  color: grey;
+}
+a:hover {
+  color: black;
+}
+a:visited {
+  color: grey;
 }
 /* Nav bar */
-.menu-container {
-  margin-left: 100px;
-  font-family: 'Prata', serif;
-}
-/*End of Nav bar*/
 
 #navigation-icon {
   cursor: pointer;
@@ -76,31 +83,56 @@ export default {
 #navigation-icon img {
   width: 5%;
 }
-.table {
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+.top-bar {
+  /*background-color: #f8f9fa;*/
+  font-family: 'Prata', serif;
+  padding-left: 10px;
 }
-
 ul#nav-list {
 	min-width: 696px;
 	list-style: none;
-	padding-top: 20px;
+  padding: 0;
+  padding-left: 30px;
+  padding-bottom: 10px;
 }
 ul#nav-list li {
+  padding-bottom: 10px;
+}
+#navigation a {
+  text-decoration: none;
+}
+#account {
+  position: absolute;
+  right: 30px;
+  top: 7px;
+}
+#nav-list {
   display: block;
+}
+.flexDisplay {
+  display: flex;
 }
 ul.flexDisplay li {
 	display: inline;
+  padding: 20px;
 }
-.jumbotron {
-  margin-bottom: 0px;
+ul#nav-list.flexDisplay.center {
+  padding: 0;
 }
+/*End of Nav bar*/
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   text-align: center;
+}
+.pageHeader {
+  background:#EBF2F1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .large-image {
   width: 100%;
@@ -130,44 +162,8 @@ h1, h2, h3, h4 {
 
 @media screen and (min-width: 400px) {
 }
+@media screen and (min-width: 900px) {
 
-@media screen and (min-width: 768px) {
-  /* Nav bar */
-  .menu-container {
-    position: static;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    margin-left: 0px;
-  }
-  .navbar-brand {
-    margin-left: 10px;
-  }
-  .nav-item {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
-  .menu-container a {
-    font-size: 13px;
-    color: #fff;
-    font-weight: 600;
-  }
+}
 
-  .menu-container ul {
-    display: inline-flex;
-  }
-  /* End of nav bar */
-}
-@media screen and (min-width: 800px) {
-  .menu-container a {
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 1045px) {
-  .nav-item {
-    margin-left: 35px;
-    margin-right: 35px;
-  }
-}
 </style>

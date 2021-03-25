@@ -1,10 +1,8 @@
 <template>
   <div class="catering">
-    <!--Header-->
-    <!--<div style="background:#EBF2F1 !important" class="jumbotron" style="margin-bottom: 0px;">-->
+    <div class="pageHeader">
       <h1 class="center">CATERING</h1>
-    <!--</div>-->
-    <!--End of Header-->
+    </div>
 
     <div class="content center" id="catering-content">
       <p>Welcome! We do catering for events with 10 or more plates. We have catered for events like:</p>
