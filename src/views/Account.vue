@@ -57,9 +57,9 @@ export default {
       name: "",
       email: "",
       glutenFree: false,
-      dairyFree: false,
+      /*dairyFree: false,
       nutFree: false,
-      vegan: false,
+      vegan: false,*/
       showForm: false
     }
   },
@@ -75,6 +75,30 @@ export default {
     },
     accountEmail() {
       return this.$root.$data.account.email;
+    },
+    dairyFree: {
+      get: function() {
+        return this.$root.$data.account.allergyAttributes.dairyFree;
+      },
+      set: function(newValue) {
+        this.$root.$data.account.allergyAttributes.dairyFree = newValue;
+      }
+    },
+    nutFree: {
+      get: function() {
+        return this.$root.$data.account.allergyAttributes.nutFree;
+      },
+      set: function(newValue) {
+        this.$root.$data.account.allergyAttributes.nutFree = newValue;
+      }
+    },
+    vegan: {
+      get: function() {
+        return this.$root.$data.account.allergyAttributes.vegan;
+      },
+      set: function(newValue) {
+        this.$root.$data.account.allergyAttributes.vegan = newValue;
+      }
     },
     accountAllergyAttributes() {
       return this.$root.$data.account.allergyAttributes;
